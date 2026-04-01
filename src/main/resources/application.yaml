@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: sistema-usuarios
+
+  # ====================== Configuração PADRÃO (desenvolvimento local) ======================
+  datasource:
+    url: jdbc:postgresql://localhost:5432/SpringDB
+    username: postgres
+    password: pedro1995
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+---
+# ====================== Profile para DOCKER ======================
+spring:
+  config:
+    activate:
+      on-profile: docker
+
+  datasource:
+    url: jdbc:postgresql://db:5432/SpringDB
+    username: postgres
+    password: pedro1995
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
