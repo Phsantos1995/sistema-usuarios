@@ -2,6 +2,7 @@ Sobre o projeto
 
 Este projeto foi desenvolvido com o objetivo de praticar e demonstrar:
 
+
 Arquitetura Limpa (Clean Architecture)
 Código Limpo (Clean Code)
 Testes unitários
@@ -11,6 +12,8 @@ Integração contínua (CI/CD)
 
 
 🛠️ Tecnologias utilizadas
+
+
 Java (ou sua linguagem)
 Spring Boot (se estiver usando)
 Mockito (testes unitários)
@@ -20,6 +23,7 @@ GitHub Actions (CI/CD)
 
 
 📦 Funcionalidades
+
 Criar usuário
 Listar usuários
 Atualizar usuário
