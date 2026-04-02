@@ -30,6 +30,13 @@ public class UsuarioService {
         return new UsuarioResponseDTO(salvo.getId(), salvo.getNome());
     }
 
+    public void deletar(Long id) {
+        if (!repository.existsById(id)) {
+            throw new UsuarioNaoEncontradoException(id);
+        }
+        repository.deleteById(id);
+    }
+
     public List<UsuarioResponseDTO> listarTodos() {
         return repository.findAll().stream()
                 .map(u -> new UsuarioResponseDTO(u.getId(), u.getNome()))
