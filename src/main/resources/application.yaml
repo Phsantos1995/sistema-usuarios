@@ -2,7 +2,7 @@ spring:
   application:
     name: sistema-usuarios
 
-  # ====================== Configuração PADRÃO (desenvolvimento local) ======================
+
   datasource:
     url: jdbc:postgresql://localhost:5432/SpringDB
     username: postgres
@@ -20,7 +20,7 @@ spring:
         format_sql: true
 
 ---
-# ====================== Profile para DOCKER ======================
+
 spring:
   config:
     activate:

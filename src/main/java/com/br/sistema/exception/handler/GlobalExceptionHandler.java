@@ -20,7 +20,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(RuntimeException.class)
     public ResponseEntity<ErrorResponse> handleGenerico(RuntimeException ex) {
 
-        ErrorResponse error = new ErrorResponse(500, "Erro interno");
+        ErrorResponse error = new ErrorResponse(500, "Erro");
 
         return ResponseEntity.status(500).body(error);
     }
